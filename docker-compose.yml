@@ -17,8 +17,8 @@ services:
   web :
     build : .
     environment:
-      DB: "mysql+pymysql://user:password@localhost:3306/db"
+      DB_URI: "mysql+pymysql://user:password@db:3306/db"
     ports :
-      - 80:80
+      - 5000:5000
 volumes:
   my-db:

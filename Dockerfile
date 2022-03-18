@@ -6,10 +6,12 @@ COPY ./requirements.txt /code/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-COPY ./start.sh /start.sh
+COPY ./start.sh /app/start.sh
 
-RUN chmod +x /start.sh
+RUN chmod +x /app/start.sh
 
 COPY ./app /app
 
-CMD ["./start_command.sh"]
+WORKDIR /app
+
+CMD ["/app/start_command.sh"]
