@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Table, ForeignKey
 from sqlalchemy.sql.sqltypes import Integer, String, Text
-from config.db import meta, engine
+from config.database import meta, engine
 
 doctors = Table(
     "doctor",

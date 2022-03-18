@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from config.db import conn
+from config.database import conn
 from src.models.patients import patients
 from src.schemas.patients import Patient
 from typing import List
